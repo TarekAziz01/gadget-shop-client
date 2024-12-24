@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import {  useForm } from "react-hook-form";
@@ -15,8 +16,14 @@ const Register = () => {
   const navigate = useNavigate()
 
   const onSubmit = (data) => {
-    CreateUser(data.email, data.password);
-    navigate("/");
+    const email = data.email;
+    const role = data.role;
+    const status = role === "buyer" ? "approved" : "pending";
+    const wishlist = [];
+    const userData = { email, role, status, wishlist };
+    // CreateUser(data.email, data.password);
+    // navigate("/");
+    console.log(data);
   };
 
   return (
