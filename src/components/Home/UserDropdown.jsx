@@ -13,7 +13,7 @@ const UserDropdown = () => {
       <div tabIndex={0} role="button">
         <div className="avatar">
           <div className=" w-10 rounded-full ">
-            <img src={`${user?.photoURL || "/public/user.png"}`} />
+            <img src={`${user?.photoURL || "/user.png"}`} />
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@ const UserDropdown = () => {
         className="dropdown-content menu bg-base-100 rounded-box z-[1] w-26 p-2 shadow flex flex-col gap-2"
       >
         <li>
-          <NavLink>Dashboard</NavLink>
+          <NavLink to="/dashboard">Dashboard</NavLink>
         </li>
         <li>
           <button
